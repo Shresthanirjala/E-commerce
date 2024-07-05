@@ -1,0 +1,30 @@
+In package json add type:module, if we do so js will support export feature.
+
+frontend request backend to:
+C: create=> post
+R: read => get
+U:update => patch
+D:delete => delete
+
+Making api means frontend request backend and backend does the task acording to the request.
+
+url = localhost:5000/trainee/123?name=anish&age=30
+url = route?query
+route = baseUrl + route params
+
+MongoDb database
+we have to define structure of data define array(model)
+namd object
+define object(Schema)
+
+Rules of model
+variable name must be same as model name 
+model name first letter always be capital model 
+name must be singular.
+
+crude sequence:
+schema 
+model
+controller
+router
+index
