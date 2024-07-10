@@ -13,5 +13,9 @@ let bookSchema = Schema({
     type: String,
     required: [true, "authot filed is required"],
   },
+  isAvailable:{
+    type:Boolean,
+    required:[true,"isAvilable field is required"],
+  }
 });
 export default bookSchema;

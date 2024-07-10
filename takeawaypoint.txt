@@ -28,3 +28,25 @@ model
 controller
 router
 index
+
+Middleware
+
+one request must have one response 
+Function which has request, response, next are called Middleware
+next() is used to trigger another Middleware
+
+Two types of middleware based on error
+Normal middleware = (req,res,next) =>{} to trigger another middleware next()
+error middleware = (err,req,res,next) =>{} to trigger another middleware next(err)
+
+Two types of middleware based on location 
+Route middleware => defined in route 
+Application middlware => defined in index.js (or main file)
+
+webuser
+fullName:
+email:
+dob:date
+gender:
+isVerifiedEmail:
+{timestam:true}

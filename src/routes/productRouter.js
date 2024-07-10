@@ -1,6 +1,11 @@
 import { Router } from "express";
-import { createProductController } from "../controllers/productController.js";
+import { createProductController, deleteProductController, readProductController, readSpecificProductController, updateProductController } from "../controllers/productController.js";
 
 let productRouter = Router();
-productRouter.route("/").post(createProductController);
+productRouter.route("/").post(createProductController).get(readProductController);
+
+productRouter.route("/:id").get(readSpecificProductController)
+.patch(updateProductController)
+.delete(deleteProductController)
 export default productRouter;
+

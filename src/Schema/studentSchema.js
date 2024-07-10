@@ -9,5 +9,7 @@ let studentSchema = new mongoose.Schema({
     type: Number,
     require: [true, "age field is required"],
   },
+  // isMarried
+  // studentImage
 });
 export default studentSchema;

@@ -10,6 +10,12 @@ import doctorRouter from "./src/routes/doctor.Router.js";
 import traineeRouter from "./src/routes/traineeRouter.js";
 import bookRouter from "./src/routes/bookRouter.js";
 import employeeRouter from "./src/routes/employeeRouter.js";
+import departmentRouter from "./src/routes/departmentRouter.js";
+import collegeRouter from "./src/routes/collegeRouter.js";
+import classroomRouter from "./src/routes/classroomRouter.js";
+import reviewRouter from "./src/routes/reviewRouter.js";
+import webuserRouter from "./src/routes/webuserRouter.js";
+
 const app = express();
 const port = 3000;
 
@@ -46,6 +52,12 @@ app.use("/doctor", doctorRouter);
 app.use("/trainee", traineeRouter);
 app.use("/book", bookRouter);
 app.use("/employee", employeeRouter);
+app.use("/department", departmentRouter);
+app.use("/college",collegeRouter);
+app.use("/classroom",classroomRouter);
+app.use("/review",reviewRouter);
+app.use("/webuser",webuserRouter)
+
 //flow
 
 //schema

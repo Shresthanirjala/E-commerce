@@ -47,3 +47,37 @@ export const readSpecificUserController = async (req, res, next) => {
     });
   }
 };
+
+export const updateUserController = async (req,res,next) => {
+  try {
+    let data = await User.findByIdAndUpdate(req.params.id,req.body, {new:true});
+    res.json({
+      sucess:true,
+      message:"user updated",
+      result:data,
+
+    })
+  } catch (error) {
+    res.json({
+      sucess:false,
+      message:error.message,
+    })
+  }
+} 
+
+export const deleteUserController = async (req,res,next) => {
+  try {
+    let data = await User.findByIdAndDelete(req.params.id);
+    res.json({
+      sucess:true,
+      message:"user delete",
+      result:data,
+    })
+  } catch (error) {
+    res.json({
+      sucess:false,
+      message:error.message,
+    })
+    
+  }
+}

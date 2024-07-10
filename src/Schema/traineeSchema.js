@@ -13,5 +13,9 @@ let traineeSchema = Schema({
     type: String,
     required: [true, "phonenumber field is requied"],
   },
+  classFaculty:{
+    type:String,
+    required:[true, "classfaculty field is required"],
+  }
 });
 export default traineeSchema;

@@ -46,3 +46,36 @@ export const readSpecificTeacherController = async (req, res, next) => {
     });
   }
 };
+
+export const updateTeacherController = async (req,res,next) => {
+  try {
+    let data = await Teacher.findByIdAndUpdate(req.params.id,req.body,{new:true})
+    res.json({
+      sucess:true,
+      message:"teacher updated sucessfully",
+      result:data,
+    })
+  } catch (error) {
+    res.json({
+      sucess:false,
+      message:error.message,
+    })
+    
+  }
+}
+
+export const deleteTeacherController = async (req,res,next) => {
+  try {
+    let data = await Teacher .findByIdAndDelete(req.params.id)
+    res.json({
+      sucess:true,
+      message:"teacher deleted sucessfully",
+      result:data,
+    })
+  } catch (error) {
+    res.json({
+      sucess:false,
+      message:error.message,
+    })
+  }
+}
