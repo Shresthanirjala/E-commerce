@@ -10,6 +10,10 @@ console.log(hashedPassword)
 
 //compare hash password
 
-let loginPassword = "password@123";
-let isvalidPassword = await bcrypt.compare(loginPassword, hashedPassword);
-console.log(isvalidPassword);
+// let loginPassword = "password@123";
+// let isvalidPassword = await bcrypt.compare(loginPassword, hashedPassword);
+// console.log(isvalidPassword);
+
+let password="456";
+let hashedpassword=await bcrypt.hash(password,10)
+console.log(hashedpassword)

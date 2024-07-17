@@ -50,3 +50,25 @@ dob:date
 gender:
 isVerifiedEmail:
 {timestam:true}
+
+
+HTTP status code 
+
+100-199: information response
+200-299: successfull response
+300-399: redirection message
+400-499: client error response
+500-599: server error response
+
+
+200: ok
+201: create
+
+
+400: Bad request
+401: Uauthorized
+403: Forbidden
+404: Not found
+
+
+500: internal server

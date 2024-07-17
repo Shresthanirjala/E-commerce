@@ -4,7 +4,7 @@ import nodemailer from "nodemailer";
 
 
 let transporterInfo = {
-    host:"smto.gmail.com",
+    host:"smtp.gmail.com",
     port:587,
     secure:false,
     auth:{
@@ -15,7 +15,7 @@ let transporterInfo = {
     },
 };
 
-export const sendEmail = async () => {
+export const sendEmail = async (mailInfo) => {
 try {
     let transporter = nodemailer.createTransport(transporterInfo);
     let info = await transporter.sendMail(mailInfo);

@@ -29,7 +29,7 @@ role:{
 },
 isVerifiedEmail:{
     type:Boolean,
-    required:[true,"isverified field is required"],
+    required:[true,"isverifiedEmail field is required"],
 },
 
 })
