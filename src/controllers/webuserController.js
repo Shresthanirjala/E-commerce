@@ -172,11 +172,10 @@ export const myProfile = async(req, res, next) =>{
 
  export const updatePassword = async(req, res, next) => {
     try {
-let id = req._id;
+let _id = req._id;
 let oldPassword = req.body.oldPassword;
 let newPassword = req.body.newPassword;
-let data = await Webuser.findById(id)
-
+let data = await Webuser.findById(_id)
 let hashedPassword = data.password;
 let isValidPassword = await bcrypt.compare(oldPassword,hashedPassword);
 if(isValidPassword){
@@ -248,7 +247,7 @@ res.status(200).json({
  }
  export const resetPassword = async (req,res,next) => {
     try {
-        let id = req._id;
+        let _id = req._id;
         let password = req.body.password;
         let hashedPassword = await bcrypt.hash(password, 10);
         let result = await Webuser.findByIdAndUpdate(
@@ -310,7 +309,7 @@ export const readSpecificWebuserController = async (req,res,next) => {
 
 export const updateWebuserController = async (req,res,next) => {
     try { 
-        let id = req.params.id;
+        let _id = req.params.id;
         let data = req.body
         delete data.email;
         delete data.body.password;

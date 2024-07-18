@@ -15,8 +15,10 @@ import collegeRouter from "./src/routes/collegeRouter.js";
 import classroomRouter from "./src/routes/classroomRouter.js";
 import reviewRouter from "./src/routes/reviewRouter.js";
 import webuserRouter from "./src/routes/webuserRouter.js";
+import fileRouter from "./src/routes/sendFileRouter.js";
 
 const app = express();
+app.use(express.static("./public"));
 const port = 3000;
 
 connectMongoDb();
@@ -57,7 +59,7 @@ app.use("/college",collegeRouter);
 app.use("/classroom",classroomRouter);
 app.use("/review",reviewRouter);
 app.use("/webuser",webuserRouter)
-
+app.use("/files",fileRouter);
 
 //flow
 
